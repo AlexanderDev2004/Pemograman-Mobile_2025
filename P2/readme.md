@@ -4,7 +4,7 @@ Modifikasilah kode pada baris 3 di VS Code atau Editor Code favorit Anda berikut
 Output yang diminta (Gantilah Fulan dengan nama Anda): </br>
 ![alt text](/img/image-2.png) </br>
 
-Jawaban:
+Jawaban: </br>
 ![alt text](/img/image.png)
 
 Soal 2
