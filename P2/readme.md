@@ -1,11 +1,11 @@
 Soal 1
 Modifikasilah kode pada baris 3 di VS Code atau Editor Code favorit Anda berikut ini agar mendapatkan keluaran (output) sesuai yang diminta!
-![alt text](image-1.png)
+![alt text](/img/image-1.png)
 Output yang diminta (Gantilah Fulan dengan nama Anda):
-![alt text](image-2.png)
+![alt text](/img/image-2.png)
 
 Jawaban:
-![alt text](image.png)
+![alt text](/img/image.png)
 
 Soal 2
 Mengapa sangat penting untuk memahami bahasa pemrograman Dart sebelum kita menggunakan framework Flutter ? Jelaskan!
