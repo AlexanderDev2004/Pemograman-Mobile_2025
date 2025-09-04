@@ -1,29 +1,50 @@
-Soal 1
-Modifikasilah kode pada baris 3 di VS Code atau Editor Code favorit Anda berikut ini agar mendapatkan keluaran (output) sesuai yang diminta! </br>
-![alt text](/img/image-1.png) </br>
-Output yang diminta (Gantilah Fulan dengan nama Anda): </br>
-![alt text](/img/image-2.png) </br>
+## Soal 1
+Modifikasi kode pada baris 3 di editor favorit Anda agar output sesuai yang diminta.  
+Gantilah "Fulan" dengan nama Anda.
 
-Jawaban: </br>
-![alt text](/img/image.png)
+![Contoh Soal](/img/image-1.png)  
+**Output yang diminta:**  
+![Contoh Output](/img/image-2.png)
 
-Soal 2
-Mengapa sangat penting untuk memahami bahasa pemrograman Dart sebelum kita menggunakan framework Flutter ? Jelaskan!
+**Jawaban:**  
+![Jawaban](/img/image.png)
 
-Jawaban:
-Dart adalah bahasa pemrograman yang dibuat oleh Google untuk menyediakan kemampuan yang sama dengan Java dan JavaScript, namun dengan kemampuan yang lebih tinggi dan lebih cepat.
+---
 
-Soal 3
-Rangkumlah materi dari codelab ini menjadi poin-poin penting yang dapat Anda gunakan untuk membantu proses pengembangan aplikasi mobile menggunakan framework Flutter.
+## Soal 2
+**Mengapa penting memahami bahasa Dart sebelum menggunakan Flutter?**
 
-Jawaban:
-- Dart adalah bahasa pemrograman yang dibuat oleh Google untuk menyediakan kemampuan yang sama dengan Java dan JavaScript, namun dengan kemampuan yang lebih tinggi dan lebih cepat.
-- Flutter adalah framework yang digunakan untuk membangun aplikasi mobile dengan menggunakan bahasa pemrograman Dart.
-  
-Soal 4
-Buatlah penjelasan dan contoh eksekusi kode tentang perbedaan Null Safety dan Late variabel !
+**Jawaban:**  
+Dart adalah bahasa utama untuk Flutter. Memahami Dart membantu dalam menulis kode yang efisien, memahami struktur aplikasi, dan memanfaatkan fitur-fitur Flutter secara optimal.
 
-Jawaban:
-Null Safety adalah fitur dari Dart yang memungkinkan pengembang untuk menentukan bahwa nilai yang dikembalikan dari sebuah fungsi dapat bernilai null atau tidak. Jika fungsi yang dikembalikan nilai null, maka Dart akan menambahkan nilai null kedalam variabel yang dikembalikan.
+---
 
-Late variabel adalah fitur dari Dart yang memungkinkan pengembang untuk menentukan bahwa variabel yang dikembalikan dari sebuah fungsi dapat bernilai null atau tidak. Jika variabel yang dikembalikan nilai null, maka Dart akan menambahkan nilai null kedalam variabel yang dikembalikan.
+## Soal 3
+**Rangkuman poin penting dari codelab Flutter:**
+
+- Dart adalah bahasa pemrograman utama untuk Flutter.
+- Flutter memudahkan pembuatan aplikasi mobile lintas platform.
+- Widget adalah komponen utama dalam membangun UI di Flutter.
+- Hot reload mempercepat proses pengembangan aplikasi.
+
+---
+
+## Soal 4
+**Perbedaan Null Safety dan Late Variable di Dart:**
+
+- **Null Safety:**  
+    Memastikan variabel tidak bernilai null kecuali diizinkan. Membantu mencegah error runtime akibat nilai null.
+
+    ```dart
+    String? nama; // Bisa null
+    String alamat = "Jakarta"; // Tidak bisa null
+    ```
+
+- **Late Variable:**  
+    Variabel diinisialisasi nanti, tapi pasti sebelum digunakan.
+
+    ```dart
+    late String nama;
+    nama = "Andi";
+    print(nama); // Output: Andi
+    ```
