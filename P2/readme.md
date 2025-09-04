@@ -1,8 +1,8 @@
 Soal 1
-Modifikasilah kode pada baris 3 di VS Code atau Editor Code favorit Anda berikut ini agar mendapatkan keluaran (output) sesuai yang diminta!
-![alt text](/img/image-1.png)
-Output yang diminta (Gantilah Fulan dengan nama Anda):
-![alt text](/img/image-2.png)
+Modifikasilah kode pada baris 3 di VS Code atau Editor Code favorit Anda berikut ini agar mendapatkan keluaran (output) sesuai yang diminta! </br>
+![alt text](/img/image-1.png) </br>
+Output yang diminta (Gantilah Fulan dengan nama Anda): </br>
+![alt text](/img/image-2.png) </br>
 
 Jawaban:
 ![alt text](/img/image.png)
