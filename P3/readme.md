@@ -1,5 +1,8 @@
 <h1>📱 Pengantar Bahasa Pemrograman Dart - Bagian 2</h1>
 
+| Nama | NIM | Kelas/Absen |
+| --- | --- | --- |
+| Alexander Agung Raya | 2341720040 | TI-3H / 01 |
 ## Praktikum 1: Menerapkan Control Flows ("if/else")
 - Langkah 1:
 Ketik atau salin kode program berikut ke dalam fungsi `main()`.
