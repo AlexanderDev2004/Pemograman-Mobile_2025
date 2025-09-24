@@ -47,7 +47,7 @@
 - Langkah 12:
 Silakan screenshot seperti pada Langkah 11, namun teks yang ditampilkan dalam aplikasi berupa nama lengkap Anda. Simpan file screenshot dengan nama 01.png pada folder images (buat folder baru jika belum ada) di project hello_world Anda. Lalu ubah isi README.md seperti berikut, sehingga tampil hasil screenshot pada file README.md. Kemudian push ke repository Anda.
 
-![alt text](/images/P5-1-1.png)
+![alt text](images/P5-1-1.png)
 ## Praktikum 4: Menerapkan Widget Dasar
 
 - Langkah 1: Text Widget
@@ -72,38 +72,38 @@ Silakan screenshot seperti pada Langkah 11, namun teks yang ditampilkan dalam ap
     Lakukan import file `text_widget`.dart ke main.dart, lalu ganti bagian text widget dengan kode di atas. Maka hasilnya seperti gambar berikut. Screenshot hasil milik Anda, lalu dibuat laporan pada file README.md.
 
     ### Jawaban
-    ![alt text](/images/p5-1-2.png)
+    ![alt text](images/p5-1-2.png)
 
 - Langkah 2: Image Widget
   Buat sebuah file `image_widget.dart`di dalam folder basic_widgets dengan isi kode berikut.
 
   ```dart
   import 'package:flutter/material.dart';
-
-    class MyImageWidget extends StatelessWidget {
+  
+  class MyImageWidget extends StatelessWidget {
     const MyImageWidget({Key? key}) : super(key: key);
-
+  
     @override
     Widget build(BuildContext context) {
-    return const Image(
-      image: AssetImage("/images/lIamProgrammerEnglish.png")
-    );
-  }
+      return const Image(
+        image: AssetImage("images/IamProgrammerEnglish.png")
+      );
     }
+  }
     ```
 
     Lakukan penyesuaian asset pada file ``pubspec.yaml`` dan tambahkan file logo Anda di folder `assets` project hello_world.
 
     ```yaml
-        flutter:
-        assets:
-     IamProgrammerEnglish.png
+    flutter:
+      assets:
+        - images/IamProgrammerEnglish.png
     ```
 
     Jangan lupa sesuaikan kode dan import di file main.dart kemudian akan tampil gambar seperti berikut.
 
     ### Jawaban
-    ![alt text](/images/p5-1-3.png)
+    ![alt text](images/p5-1-3.png)
     
 ## Praktikum 5: Menerapkan Widget Material Design dan iOS Cupertino
 
@@ -128,7 +128,7 @@ Silakan screenshot seperti pada Langkah 11, namun teks yang ditampilkan dalam ap
     );
     ```
     ### Jawaban
-    ![alt text](/images/p5-1-4.png)
+    ![alt text](images/p5-1-4.png)
 
 - Langkah 2: Floating Action Button (FAB)
     Button widget terdapat beberapa macam pada flutter yaitu ButtonBar, DropdownButton, TextButton, FloatingActionButton, IconButton, OutlineButton, PopupMenuButton, dan ElevatedButton.
@@ -150,7 +150,7 @@ Silakan screenshot seperti pada Langkah 11, namun teks yang ditampilkan dalam ap
     ```
 
     ### Jawaban
-    ![alt text](/images/p5-1-5.png)
+    ![alt text](images/p5-1-5.png)
 - Langkah 3: Scaffold Widget
     Scaffold widget digunakan untuk mengatur tata letak sesuai dengan material design.
 
@@ -234,7 +234,7 @@ Silakan screenshot seperti pada Langkah 11, namun teks yang ditampilkan dalam ap
     ```
 
     ### Jawaban
-    ![alt text](/images/p5-1-6.png)
+    ![alt text](images/p5-1-6.png)
 
 - Langkah 4: Dialog Widget
     Dialog widget pada flutter memiliki dua jenis dialog yaitu `AlertDialog` dan `SimpleDialog`.
@@ -301,7 +301,7 @@ Silakan screenshot seperti pada Langkah 11, namun teks yang ditampilkan dalam ap
     ```
 
     ### Jawaban
-    ![alt text](/images/p5-1-7.png)
+    ![alt text](images/p5-1-7.png)
 
 - Langkah 5: Input dan Selection Widget
     Flutter menyediakan widget yang dapat menerima input dari pengguna aplikasi yaitu antara lain Checkbox, Date and Time Pickers, Radio Button, Slider, Switch, TextField.
@@ -331,7 +331,7 @@ Silakan screenshot seperti pada Langkah 11, namun teks yang ditampilkan dalam ap
     ```
 
     ### Jawaban
-    ![alt text](/images/p5-1-8.png)
+    ![alt text](images/p5-1-8.png)
 
 - Langkah 6: Date and Time Pickers
     Date and Time Pickers termasuk pada kategori input dan selection widget, berikut adalah contoh penggunaan Date and Time Pickers.
@@ -413,4 +413,4 @@ Silakan screenshot seperti pada Langkah 11, namun teks yang ditampilkan dalam ap
     ```
 
     ### Jawaban
-    ![alt text](/images/p5-1-9.png)
+    ![alt text](images/p5-1-9.png)
