@@ -96,11 +96,15 @@
   ),
   );
   ```
+
   * soal 1 */ Letakkan widget Column di dalam widget Expanded agar menyesuaikan ruang yang tersisa di dalam widget Row. Tambahkan properti crossAxisAlignment ke CrossAxisAlignment.start sehingga posisi kolom berada di awal baris.
 
   /* soal 2 */ Letakkan baris pertama teks di dalam Container sehingga memungkinkan Anda untuk menambahkan padding = 8. Teks ‘Batu, Malang, Indonesia' di dalam Column, set warna menjadi abu-abu.
 
   /* soal 3 */ Dua item terakhir di baris judul adalah ikon bintang, set dengan warna merah, dan teks "41". Seluruh baris ada di dalam Container dan beri padding di sepanjang setiap tepinya sebesar 32 piksel. Kemudian ganti isi body text ‘Hello World' dengan variabel titleSection seperti berikut:
+
+  ### Jawaban
+  ![alt text](image-4.png)
 
 ## Praktikum 2: Implementasi button row
 - Langkah 1: Buat method Column `_buildButtonColumn`
@@ -168,7 +172,8 @@
     buttonSection,
    )
   ```
-
+  ### Jawaban
+  ![alt text](image-7.png)
 ## Praktikum 3: Implementasi `text section`
   Selesaikan langkah-langkah praktikum berikut ini dengan melanjutkan dari praktikum sebelumnya.
 
@@ -237,4 +242,17 @@
     body: ListView()
   ```
   ### Jawaban
+  ![alt text](image-8.png)
+
+  ### Memangggil component
+  ![alt text](image-9.png)
+  ### Hasil
   ![alt text](image-6.png) 
+
+
+## Tugas Praktikum 1
+1. Selesaikan Praktikum 1 sampai 4, lalu dokumentasikan dan push ke repository Anda berupa screenshot setiap hasil pekerjaan beserta penjelasannya di file README.md!
+2. Silakan implementasikan di project baru "basic_layout_flutter" dengan mengakses sumber ini: https://docs.flutter.dev/codelabs/layout-basics
+3. Kumpulkan link commit repository GitHub Anda kepada dosen yang telah disepakati!
+
+### Jawaban Untuk Tugas 2
