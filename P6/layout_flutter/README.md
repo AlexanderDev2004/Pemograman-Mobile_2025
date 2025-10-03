@@ -104,7 +104,7 @@
   /* soal 3 */ Dua item terakhir di baris judul adalah ikon bintang, set dengan warna merah, dan teks "41". Seluruh baris ada di dalam Container dan beri padding di sepanjang setiap tepinya sebesar 32 piksel. Kemudian ganti isi body text ‘Hello World' dengan variabel titleSection seperti berikut:
 
   ### Jawaban
-  ![alt text](img/p6-1-5.png)
+  ![alt text](/img/p6-1-5.png)
 
 ## Praktikum 2: Implementasi button row
 - Langkah 1: Buat method Column `_buildButtonColumn`
