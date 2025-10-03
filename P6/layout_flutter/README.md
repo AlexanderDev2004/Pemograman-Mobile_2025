@@ -37,7 +37,7 @@
   }
   ```
  ### Jawaban
- ![alt text](image.png)
+ ![alt text](img/p6-1-1.png)
 
 - Langkah 3: Identifikasi layout diagram
   Langkah pertama adalah memecah tata letak menjadi elemen dasarnya:
@@ -49,11 +49,11 @@
   Perhatikan area yang memerlukan alignment, padding, atau borders.
   Pertama, identifikasi elemen yang lebih besar. Dalam contoh ini, empat elemen disusun menjadi sebuah kolom: sebuah gambar, dua baris, dan satu blok teks.
 
-  ![alt text](image-1.png)
+  ![alt text](img/p6-1-2.png)
   Selanjutnya, buat diagram setiap baris. Baris pertama, disebut bagian Judul, memiliki 3 anak: kolom teks, ikon bintang, dan angka. Anak pertamanya, kolom, berisi 2 baris teks. Kolom pertama itu memakan banyak ruang, sehingga harus dibungkus dengan widget yang Diperluas.
-  ![alt text](image-2.png)
+  ![alt text](img/p6-1-3.png)
   Baris kedua, disebut bagian Tombol, juga memiliki 3 anak: setiap anak merupakan kolom yang berisi ikon dan teks.
-  ![alt text](image-3.png)
+  ![alt text](img/p6-1-4.png)
 
   Setelah tata letak telah dibuat diagramnya, cara termudah adalah dengan menerapkan pendekatan bottom-up. Untuk meminimalkan kebingungan visual dari kode tata letak yang banyak bertumpuk, tempatkan beberapa implementasi dalam variabel dan fungsi.
 - Langkah 4: Implementasi title row
@@ -104,7 +104,7 @@
   /* soal 3 */ Dua item terakhir di baris judul adalah ikon bintang, set dengan warna merah, dan teks "41". Seluruh baris ada di dalam Container dan beri padding di sepanjang setiap tepinya sebesar 32 piksel. Kemudian ganti isi body text ‘Hello World' dengan variabel titleSection seperti berikut:
 
   ### Jawaban
-  ![alt text](image-4.png)
+  ![alt text](img/p6-1-5.png)
 
 ## Praktikum 2: Implementasi button row
 - Langkah 1: Buat method Column `_buildButtonColumn`
@@ -173,7 +173,7 @@
    )
   ```
   ### Jawaban
-  ![alt text](image-7.png)
+  ![alt text](img/p6-1-6.png)
 ## Praktikum 3: Implementasi `text section`
   Selesaikan langkah-langkah praktikum berikut ini dengan melanjutkan dari praktikum sebelumnya.
 
@@ -242,12 +242,12 @@
     body: ListView()
   ```
   ### Jawaban
-  ![alt text](image-8.png)
+  ![alt text](img/p6-1-7.png)
 
   ### Memangggil component
-  ![alt text](image-9.png)
+  ![alt text](img/p6-1-8.png)
   ### Hasil
-  ![alt text](image-6.png) 
+  ![alt text](img/p6-1-9.png) 
 
 
 ## Tugas Praktikum 1
