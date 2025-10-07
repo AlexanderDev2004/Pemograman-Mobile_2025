@@ -269,7 +269,7 @@ Pada praktikum 5 ini anda akan belajar mengenai pembangunan aplikasi bergerak mu
     Buatlah dua buah file dart dengan nama `home_page.dart` dan `item_page.dart` pada folder pages. Untuk masing-masing file, deklarasikan class HomePage pada file `home_page.dart` dan ItemPage pada `item_page.dart`. Turunkan class dari StatelessWidget. Gambaran potongan kode dapat anda lihat sebagai berikut.
 
     ### Jawaban
-    ![alt text](/img/p6-1-11.png)
+    ![alt text](/img/p6-1-11.png) </br>
     ![alt text](/img/p6-1-12.png)
 
 - Langkah 3: Lengkapi Kode di main.dart
