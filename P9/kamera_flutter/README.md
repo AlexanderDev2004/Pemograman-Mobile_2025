@@ -652,7 +652,7 @@ Buatlah project flutter baru di pertemuan 09 dengan nama photo_filter_carousel
     ```
 
     ### Jawaban 
-    ![alt text](image.png)
+    ![alt text](p9-13.png)
 
 ## Tugas Praktikum
 
@@ -660,7 +660,8 @@ Buatlah project flutter baru di pertemuan 09 dengan nama photo_filter_carousel
 2. Gabungkan hasil praktikum 1 dengan hasil praktikum 2 sehingga setelah melakukan pengambilan foto, dapat dibuat filter carouselnya!
    
    #### Jawaban
-   
+   ![alt text](p9-14.png)
+   ![alt text](p9-15.png)
 3. Jelaskan maksud void async pada praktikum 1?
    
    #### Jawaban
