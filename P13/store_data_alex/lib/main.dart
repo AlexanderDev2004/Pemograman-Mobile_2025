@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'dart:convert';
-import './model/pizza.dart';
-
+import 'package:path_provider/path_provider.dart';
+import 'dart:io';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -12,8 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'JSON Pizza List - Alex',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      title: 'Secure Storage Demo',
       home: const MyHomePage(),
     );
   }
@@ -27,82 +26,113 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  List<Pizza> myPizzas = [];
+  late File myFile;
+  String fileText = '';
+  String documentPath = '';
+  String tempPath = '';
 
-  // FIX: Konversi list Pizza ke JSON string
-  String convertToJSON(List<Pizza> pizzas) {
-    return jsonEncode(pizzas.map((pizza) => pizza.toJson()).toList());
-  }
+  final storage = const FlutterSecureStorage();
+  final pwdController = TextEditingController();
+  String myPass = '';
+
+  final String myKey = "myPass";
 
   @override
   void initState() {
     super.initState();
-    readJsonFile();
+    getPaths().then((_) {
+      myFile = File('$documentPath/pizzas.txt');
+      writeFile();
+    });
   }
 
-  Future<void> readJsonFile() async {
-    String myString = await DefaultAssetBundle.of(context)
-        .loadString('assets/pizzalist.json');
-
-    List<dynamic> pizzaMapList = jsonDecode(myString);
+  Future<void> getPaths() async {
+    final docDir = await getApplicationDocumentsDirectory();
+    final tmpDir = await getTemporaryDirectory();
 
     setState(() {
-      myPizzas = pizzaMapList.map((e) => Pizza.fromJson(e)).toList();
+      documentPath = docDir.path;
+      tempPath = tmpDir.path;
     });
+  }
 
-    // Print JSON hasil encode ulang
-    String json = convertToJSON(myPizzas);
-    print(json);
+  Future<bool> writeFile() async {
+    try {
+      await myFile.writeAsString('Margherita, Capricciosa, Napoli');
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  Future<bool> readFile() async {
+    try {
+      String content = await myFile.readAsString();
+      setState(() {
+        fileText = content;
+      });
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  Future<void> writeToSecureStorage() async {
+    await storage.write(key: myKey, value: pwdController.text);
+  }
+
+  Future<void> readFromSecureStorage() async {
+    String secret = await storage.read(key: myKey) ?? '';
+    setState(() {
+      myPass = secret;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("JSON - Alex")),
-      body: myPizzas.isEmpty
-          ? const Center(child: CircularProgressIndicator())
-          : ListView.builder(
-              itemCount: myPizzas.length,
-              itemBuilder: (context, index) {
-                Pizza p = myPizzas[index];
-                return Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Icon(
-                        Icons.local_pizza,
-                        size: 32,
-                        color: Colors.orange,
-                      ),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              p.pizzaName,
-                              style: const TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            const SizedBox(height: 4),
-                            Text(
-                              "${p.description} - Rp ${p.price}",
-                              style: const TextStyle(
-                                fontSize: 16,
-                                color: Colors.black54,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                );
-              },
+      appBar: AppBar(
+        title: const Text("Path Provider - Alex"),
+        backgroundColor: Colors.purple,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(25.0),
+        child: Column(
+          children: [
+            const SizedBox(height: 10),
+
+            // INPUT TEXT
+            TextField(
+              controller: pwdController,
+              decoration: const InputDecoration(
+                hintText: "Super Secret String!",
+              ),
             ),
+            const SizedBox(height: 20),
+
+            // SAVE VALUE BUTTON
+            ElevatedButton(
+              onPressed: () async => await writeToSecureStorage(),
+              child: const Text("Save Value"),
+            ),
+            const SizedBox(height: 15),
+
+            // READ VALUE BUTTON
+            ElevatedButton(
+              onPressed: () async => await readFromSecureStorage(),
+              child: const Text("Read Value"),
+            ),
+
+            const SizedBox(height: 20),
+
+            // SHOW VALUE
+            Text(
+              myPass,
+              style: const TextStyle(fontSize: 18),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

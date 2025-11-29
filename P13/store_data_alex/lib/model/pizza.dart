@@ -13,17 +13,25 @@ class Pizza {
     required this.imageUrl,
   });
 
+  // ✔ FIX: gunakan factory agar final fields bisa diinisialisasi
   factory Pizza.fromJson(Map<String, dynamic> json) {
     return Pizza(
-      id: json['id'],
-      pizzaName: json['pizzaName'],
-      description: json['description'],
-      price: (json['price'] as num).toDouble(),
-      imageUrl: json['imageUrl'],
+      id: int.tryParse(json['id'].toString()) ?? 0,
+
+      pizzaName: json['pizzaName'] != null
+          ? json['pizzaName'].toString()
+          : 'No name',
+
+      description: json['description'] != null
+          ? json['description'].toString()
+          : '',
+
+      price: double.tryParse(json['price'].toString()) ?? 0,
+
+      imageUrl: json['imageUrl']?.toString() ?? '',
     );
   }
 
-  // FIX: toJson yang benar
   Map<String, dynamic> toJson() {
     return {
       'id': id,

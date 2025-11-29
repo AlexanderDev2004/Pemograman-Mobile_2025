@@ -8,7 +8,8 @@ plugins {
 android {
     namespace = "com.example.store_data_alex"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    ndkVersion = "29.0.13846066"
+
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
